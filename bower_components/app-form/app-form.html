@@ -1,0 +1,30 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-button/paper-button.html">
+
+<dom-module id="app-form">
+  <template>
+		<style is="custom-style">
+		  paper-button.indigo {
+		    background-color: var(--paper-indigo-500);
+		    color: white;
+		    --paper-button-raised-keyboard-focus: {
+		      background-color: var(--paper-pink-a200) !important;
+		      color: white !important;
+		    };
+		  }	
+		</style>
+		<form is="iron-form" id="form" method="post" action="{{ action }}">
+			<paper-input label="App Name"></paper-input>
+			<paper-button raised class="custom indigo">Submit</paper-button>
+		</form>
+	</template>
+ <script>
+    Polymer({
+      is: 'app-form',
+      properties: {
+        fancy: String,
+			}
+		});
+	</script>
+</dom-module>
