@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  	<link rel="import" href="../paper-input/paper-input.html">
+  	<link rel="import" href="../paper-button/paper-button.html">
+		<style is="custom-style">
+		  paper-button.indigo {
+		    background-color: var(--paper-indigo-500);
+		    color: white;
+		    --paper-button-raised-keyboard-focus: {
+		      background-color: var(--paper-pink-a200) !important;
+		      color: white !important;
+		    };
+		  }	
+		</style>
+	</head>
+  <body>
+		<form is="iron-form" id="form" method="post" action="/form/handler">
+			<paper-input label="App Name"></paper-input>
+			<paper-button raised class="custom indigo">Submit</paper-button>
+		</form>
+	</body>
+</html>
+
